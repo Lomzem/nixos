@@ -6,6 +6,7 @@
       [ # Include the results of the hardware scan.
       self.nixosModules.desktopHardware
       self.nixosModules.niri
+      self.nixosModules.neovim
       ];
 
 # Use the systemd-boot EFI boot loader.
