@@ -1,0 +1,3 @@
+[submodule "external-repos/nix"]
+	path = external-repos/nix
+	url = git@github.com:NixOS/nix.git
