@@ -33,6 +33,9 @@
         ];
         packages = [
           "git:github.com/arpagon/pi-rewind@91611ad87992fb7b635a41ba68f67916ff6e6ae3"
+          "pi-web-access"
+          "@juicesharp/rpiv-ask-user-question"
+          "@juicesharp/rpiv-btw"
         ];
       };
     };
