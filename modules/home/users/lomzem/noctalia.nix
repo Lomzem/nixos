@@ -21,7 +21,16 @@ in
   };
 
   xdg.configFile = {
-    "noctalia/colorschemes".source = "${configDir}/colorschemes";
-    "noctalia/templates".source = "${configDir}/templates";
+    "noctalia/colors.json".force = true;
+    "noctalia/colorschemes" = {
+      force = true;
+      source = "${configDir}/colorschemes";
+    };
+    "noctalia/plugins.json".force = true;
+    "noctalia/settings.json".force = true;
+    "noctalia/templates" = {
+      force = true;
+      source = "${configDir}/templates";
+    };
   };
 }
