@@ -37,6 +37,8 @@ in
     ];
   };
 
+  xdg.enable = true;
+
   programs.niri.settings = {
     input = {
       mod-key = "Super";
