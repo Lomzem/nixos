@@ -1,12 +1,17 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
+  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
   };
 
-  programs.niri.enable = true;
+  programs.niri = {
+    enable = true;
+    package = pkgs.niri-unstable;
+  };
 
   xdg.portal = {
     enable = true;

@@ -4,6 +4,7 @@
   imports = [
     ./fish.nix
     ./git.nix
+    ./niri.nix
     ./ssh.nix
   ];
 
