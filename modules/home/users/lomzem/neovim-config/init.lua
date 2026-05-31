@@ -19,13 +19,15 @@ vim.keymap.set("n", "<a-e>", "<cmd>NvimTreeToggle<cr>")
 
 vim.pack.add({ "https://github.com/mrcjkb/rustaceanvim" })
 
--- Source all in `lua/plugins`
-local plugins_dir = vim.fs.joinpath(vim.fn.stdpath("config"), "lua", "plugins")
-for name, type in vim.fs.dir(plugins_dir, { depth = math.huge }) do
-	if type == "file" then
-		local abspath = vim.fs.joinpath(plugins_dir, name)
-		dofile(abspath)
-	end
-end
+require("plugins.filesystem")
+require("plugins.grapple")
+require("plugins.lualine")
+require("plugins.luasnip")
+require("plugins.mini")
+require("plugins.navigation")
+require("plugins.neotab")
+require("plugins.snacks")
+require("plugins.supermaven")
+require("plugins.treesitter")
 
 require("lsp")
