@@ -161,6 +161,29 @@ in
   programs.starship = {
     enable = true;
     enableFishIntegration = true;
+
+    settings = {
+      "$schema" = "https://starship.rs/config-schema.json";
+      add_newline = true;
+      format = "$python$directory$git_branch\n$character";
+
+      directory = {
+        style = "cyan";
+        truncation_length = 2;
+        truncation_symbol = "";
+        fish_style_pwd_dir_length = 1;
+      };
+
+      git_branch = {
+        format = " [$branch]($style)";
+        style = "blue";
+      };
+
+      python = {
+        format = ''[(\($virtualenv\) )]($style)'';
+        style = "white";
+      };
+    };
   };
 
   programs.zoxide = {
