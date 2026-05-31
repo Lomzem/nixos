@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-	
+
   flake.nixosModules.niri = { pkgs, lib, ... }: {
     programs.niri = {
       enable = true;
@@ -7,19 +7,26 @@
     };
   };
 
-  perSystem = { pkgs, lib, self', ... }: {
-    packages.myNiri = inputs.wrapper-modules.wrappers.niri.wrap {
-      inherit pkgs;
+  perSystem =
+    {
+      pkgs,
+      lib,
+      self',
+      ...
+    }:
+    {
+      packages.myNiri = inputs.wrapper-modules.wrappers.niri.wrap {
+        inherit pkgs;
 
-      settings = {
-      	spawn-at-startup = [
-	  (lib.getExe self'.packages.myNoctalia)
-	];
+        settings = {
+          spawn-at-startup = [
+            (lib.getExe self'.packages.myNoctalia)
+          ];
 
-	binds = {
-	  "Mod+Q".spawn-sh = lib.getExe pkgs.kitty;
-	};
+          binds = {
+            "Mod+Q".spawn-sh = lib.getExe pkgs.kitty;
+          };
+        };
       };
     };
-  };
 }
