@@ -32,6 +32,7 @@
       python3
       ripgrep
       rustup
+      vesktop
       wget
     ]);
   };
