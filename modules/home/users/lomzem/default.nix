@@ -29,6 +29,7 @@
       just
       llvm
       nodejs
+      opencode
       python3
       ripgrep
       rustup
