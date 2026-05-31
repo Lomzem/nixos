@@ -60,6 +60,10 @@ in
       if command --query dircolors
           set -gx LS_COLORS (dircolors | string replace -r '^LS_COLORS=' "" | string trim -c "'")
       end
+
+      function ls --wraps eza
+          eza $argv
+      end
     '';
 
     shellAbbrs = {
@@ -130,13 +134,6 @@ in
       gcm = ''
         git commit -m "$argv"
       '';
-
-      ls = {
-        wraps = "eza";
-        body = ''
-          eza $argv
-        '';
-      };
 
       search_coding = ''
         set choices (fd --format {} -td . "$HOME/coding/" -d 1)
