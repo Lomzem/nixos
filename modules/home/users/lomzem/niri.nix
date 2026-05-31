@@ -33,7 +33,6 @@ in
       fuzzel
       kitty
       qutebrowser
-      tmux
     ];
   };
 
@@ -115,15 +114,14 @@ in
         hotkey-overlay.title = "Open a Terminal";
         action.spawn = [
           "kitty"
-          "tmux"
         ];
       };
       "Mod+B" = {
         hotkey-overlay.title = "Open a Browser";
-        action.spawn = "qutebrowser";
+        action.spawn = "helium-browser";
       };
       "Mod+P" = {
-        hotkey-overlay.title = "Run an Application: rofi";
+        hotkey-overlay.title = "Run an Application: fuzzel";
         action.spawn-sh = "fuzzel --list-executables-in-path";
       };
 

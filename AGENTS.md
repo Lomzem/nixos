@@ -2,7 +2,9 @@
 
 ## Nix Documentation
 
-I cloned the official `nix` GitHub repository. It is located in
+Please see: https://zero-to-nix.com/llms.txt
+
+Additionally, I cloned the official `nix` GitHub repository. It is located in
 `@external-repos/nix`. Please reference it to learn more about Nix and modern
 best practices.
 
