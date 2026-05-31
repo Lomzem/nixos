@@ -16,9 +16,11 @@
       substituters = [
         "https://cache.nixos.org"
         "https://niri.cachix.org"
+        "https://noctalia.cachix.org"
       ];
       trusted-public-keys = [
         "niri.cachix.org-1:EvNL3D/X6QJ5PpxhAE94wxR8tRJq9jwjJ8yYxZMQ2Ns="
+        "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
       ];
     };
 
@@ -41,6 +43,9 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   networking.networkmanager.enable = true;
+
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
 
   hardware.bluetooth = {
     enable = true;

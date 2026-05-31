@@ -5,6 +5,7 @@
     ./fish.nix
     ./git.nix
     ./neovim.nix
+    ./noctalia.nix
     ./niri.nix
     ./ssh.nix
   ];

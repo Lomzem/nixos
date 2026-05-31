@@ -90,6 +90,11 @@ in
     prefer-no-csd = true;
     screenshot-path = "~/ss-%Y-%m-%d-%H-%M-%S.png";
     animations.slowdown = 0.5;
+    spawn-at-startup = [
+      {
+        command = [ "noctalia-shell" ];
+      }
+    ];
 
     window-rules = [
       {
