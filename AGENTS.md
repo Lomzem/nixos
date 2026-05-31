@@ -13,3 +13,4 @@ best practices.
 ## Common Issues
 
 - When running Nix CLI commands, you may need this flag: `--extra-experimental-features 'flakes nix-command'`
+- Nix wants all changes to at least be **staged** in `git`. Please just `git add -A` just to appease it.
