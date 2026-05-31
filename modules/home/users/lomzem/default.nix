@@ -4,6 +4,7 @@
   imports = [
     ./fish.nix
     ./git.nix
+    ./neovim.nix
     ./niri.nix
     ./ssh.nix
   ];
@@ -24,7 +25,6 @@
       git
       go
       llvm
-      neovim
       nodejs
       python3
       ripgrep
