@@ -51,8 +51,8 @@ in
     };
 
     environment = {
-      BROWSER = "helium-browser";
-      CHROME_EXECUTABLE = "helium-browser";
+      BROWSER = "helium";
+      CHROME_EXECUTABLE = "helium";
       ELECTRON_OZONE_PLATFORM_HINT = "wayland";
       ELM_DISPLAY = "wl";
       SDL_VIDEODRIVER = "wayland,x11";
@@ -122,7 +122,7 @@ in
       };
       "Mod+B" = {
         hotkey-overlay.title = "Open a Browser";
-        action.spawn = "helium-browser";
+        action.spawn = "helium";
       };
       "Mod+P" = {
         hotkey-overlay.title = "Run an Application: fuzzel";

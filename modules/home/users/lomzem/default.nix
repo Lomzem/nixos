@@ -2,6 +2,8 @@
 
 {
   imports = [
+    inputs.helium.homeModules.default
+
     ./fish.nix
     ./git.nix
     ./neovim.nix
@@ -17,7 +19,6 @@
     stateVersion = "25.11";
 
     packages = [
-      inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
     ] ++ (with pkgs; [
       bun
       curl
@@ -39,6 +40,13 @@
   };
 
   home.enableNixpkgsReleaseCheck = false;
+
+  programs.helium = {
+    enable = true;
+    flags = [
+      "--ozone-platform-hint=auto"
+    ];
+  };
 
   programs.home-manager.enable = true;
 }
