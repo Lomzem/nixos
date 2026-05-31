@@ -39,7 +39,6 @@ require("conform").setup({
 
 -- completion
 vim.pack.add({ "https://github.com/saghen/blink.lib", "https://github.com/saghen/blink.cmp" })
-require("blink.cmp").build():wait(60000)
 require("blink.cmp").setup({
 	keymap = {
 		preset = "none",
