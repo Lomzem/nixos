@@ -22,15 +22,31 @@ in
 
   xdg.configFile = {
     "noctalia/colors.json".force = true;
-    "noctalia/colorschemes" = {
+    "noctalia/colorschemes/Catppuccin Lavender/Catppuccin Lavender.json" = {
       force = true;
-      source = "${configDir}/colorschemes";
+      source = "${configDir}/colorschemes/Catppuccin Lavender/Catppuccin Lavender.json";
+    };
+    "noctalia/colorschemes/GitHub Dark/GitHub Dark.json" = {
+      force = true;
+      source = "${configDir}/colorschemes/GitHub Dark/GitHub Dark.json";
+    };
+    "noctalia/colorschemes/Oxocarbon/Oxocarbon.json" = {
+      force = true;
+      source = "${configDir}/colorschemes/Oxocarbon/Oxocarbon.json";
+    };
+    "noctalia/colorschemes/Poimandres/Poimandres.json" = {
+      force = true;
+      source = "${configDir}/colorschemes/Poimandres/Poimandres.json";
+    };
+    "noctalia/colorschemes/vague/vague.json" = {
+      force = true;
+      source = "${configDir}/colorschemes/vague/vague.json";
     };
     "noctalia/plugins.json".force = true;
     "noctalia/settings.json".force = true;
-    "noctalia/templates" = {
+    "noctalia/templates/opencode.json" = {
       force = true;
-      source = "${configDir}/templates";
+      source = "${configDir}/templates/opencode.json";
     };
   };
 }
