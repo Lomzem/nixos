@@ -18,6 +18,25 @@
     homeDirectory = "/home/lomzem";
     stateVersion = "25.11";
 
+    file.".pi/agent/settings.json" = {
+      force = true;
+      text = builtins.toJSON {
+        lastChangelogVersion = "0.78.0";
+        defaultProvider = "openai-codex";
+        defaultModel = "gpt-5.5";
+        hideThinkingBlock = false;
+        theme = "dark";
+        defaultThinkingLevel = "low";
+        enabledModels = [
+          "openai-codex/gpt-5.4-mini"
+          "openai-codex/gpt-5.5"
+        ];
+        packages = [
+          "git:github.com/arpagon/pi-rewind@91611ad87992fb7b635a41ba68f67916ff6e6ae3"
+        ];
+      };
+    };
+
     packages = [
     ] ++ (with pkgs; [
       bun
