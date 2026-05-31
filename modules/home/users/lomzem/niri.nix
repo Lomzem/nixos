@@ -31,7 +31,6 @@ in
     packages = with pkgs; [
       brightnessctl
       fuzzel
-      kitty
       qutebrowser
     ];
   };
@@ -118,7 +117,7 @@ in
       "Mod+Q" = {
         hotkey-overlay.title = "Open a Terminal";
         action.spawn = [
-          "kitty"
+          "rio"
         ];
       };
       "Mod+B" = {

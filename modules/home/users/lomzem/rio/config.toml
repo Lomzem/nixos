@@ -1,0 +1,23 @@
+# See the full configuration reference: https://rioterm.com/docs/config
+
+theme = "catppuccin-mocha"
+
+[fonts]
+size = 24
+features = ["-calt"]
+
+[fonts.regular]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Medium"
+
+[fonts.bold]
+family = "JetBrainsMono Nerd Font Mono"
+style = "SemiBold"
+
+[fonts.italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Medium"
+
+[fonts.bold-italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "SemiBold"

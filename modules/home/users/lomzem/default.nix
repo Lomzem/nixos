@@ -7,6 +7,7 @@
     ./neovim.nix
     ./noctalia.nix
     ./niri.nix
+    ./rio.nix
     ./ssh.nix
   ];
 
