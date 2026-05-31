@@ -2,6 +2,8 @@
 
 theme = "catppuccin-mocha"
 
+margin = [0, 16]
+
 [fonts]
 size = 24
 features = ["-calt"]
