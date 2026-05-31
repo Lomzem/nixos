@@ -38,6 +38,7 @@ in
   };
 
   xdg.enable = true;
+  xdg.configFile.niri-config.force = true;
 
   programs.niri.settings = {
     input = {
