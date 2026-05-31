@@ -17,10 +17,12 @@
         "https://cache.nixos.org"
         "https://niri.cachix.org"
         "https://noctalia.cachix.org"
+        "https://pi.cachix.org"
       ];
       trusted-public-keys = [
         "niri.cachix.org-1:EvNL3D/X6QJ5PpxhAE94wxR8tRJq9jwjJ8yYxZMQ2Ns="
         "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+        "pi.cachix.org-1:lGeoGJaZ5ZDabuRzkcD5EBTNnDM4HJ1vqeOxlWk1Flk="
       ];
     };
 

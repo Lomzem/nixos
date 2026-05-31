@@ -28,15 +28,27 @@
       url = "github:oxcl/nix-flake-helium-browser";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    blink-cmp = {
+      url = "github:saghen/blink.cmp/1617522ae80ca2436813da8afe2fc4b1280e975d";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    pi = {
+      url = "github:lukasl-dev/pi.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ nixpkgs, ... }: {
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
       specialArgs = {
         inherit inputs;
       };
       modules = [
+        {
+          nixpkgs.hostPlatform = "x86_64-linux";
+        }
         ./modules/hosts/desktop
       ];
     };

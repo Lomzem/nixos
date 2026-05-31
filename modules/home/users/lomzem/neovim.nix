@@ -1,4 +1,10 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
+
+let
+  blinkCmp = inputs.blink-cmp.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs {
+    doCheck = false;
+  };
+in
 
 {
   programs.neovim = {
@@ -32,6 +38,12 @@
 
   xdg.configFile.nvim = {
     source = ./neovim-config;
+    recursive = true;
+    force = true;
+  };
+
+  xdg.configFile."nvim/pack/nix/start/blink.cmp" = {
+    source = blinkCmp;
     recursive = true;
     force = true;
   };

@@ -38,8 +38,10 @@ require("conform").setup({
 })
 
 -- completion
-vim.pack.add({ "https://github.com/saghen/blink.lib", "https://github.com/saghen/blink.cmp" })
 require("blink.cmp").setup({
+	fuzzy = {
+		implementation = "rust",
+	},
 	keymap = {
 		preset = "none",
 		["<c-p>"] = { "select_prev", "fallback" },
