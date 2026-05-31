@@ -24,6 +24,7 @@
       gh
       git
       go
+      just
       llvm
       nodejs
       python3
